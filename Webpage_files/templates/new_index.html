@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dating data</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+    
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+
+</style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f5cdf7;">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold text-uppercase py-3"
+        style="color: azure;background-color: rgb(236, 101, 191); font-size: larger;" href="index.html">OkCupid</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" max-height="10px">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Sally_sunburst.html" style="color: rgb(52, 123, 231);"> Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.html" style="color: rgb(52, 123, 231);"> Dashboard</a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="ruby.html" style="color: rgb(52, 123, 231);"> Supervised ML</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a 
+            class="nav-link dropdown-toggle" 
+            href="index.html" 
+            id="navbarDropdown"
+            role="button" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="false"
+            style="color: rgb(52, 123, 231);">
+            Matching Profiles
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="model_build.html">Model Building</a>
+            <a class="dropdown-item" href="new_index.html">Model Testing</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a 
+            class="nav-link dropdown-toggle" 
+            href="index.html" 
+            id="navbarDropdown"
+            role="button" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="false"
+            style="color: rgb(52, 123, 231);">
+            Text Analysis
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="dashboard1.html">Model Building</a>
+            <a class="dropdown-item" href="new_index1.html">Model Testing</a>
+            </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+<br>
+<br>
+<div>
+    <form action="/matchme" method="post">
+    <div class="container-fluid">
+    <div class="row align-items-center g-3">
+      <div class="col-auto">
+        <label for="inputAge">Age</label>
+        <input type="age" class="form-control" name="Age" placeholder="Age">
+      </div>
+      <div class="col-auto">
+        <label for="inputSex">Sex</label>
+        <select name="Sex" class="form-control">
+          <option selected>Choose...</option>
+          <option>m</option>
+          <option>f</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputHeight">Height</label>
+        <input type="height" class="form-control" name="Height" placeholder="Height">
+      </div>
+      <div class="col-auto">
+        <label for="inputStatus">Status</label>
+        <select name="Status" class="form-control">
+          <option selected>Choose...</option>
+          <option>available</option>
+          <option>single</option>
+          <option>married</option>
+          <option>seeing someone</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputOrientation">Orientation</label>
+        <select name="Orientation" class="form-control">
+          <option selected>Choose...</option>
+          <option>straight</option>
+          <option>gay</option>
+          <option>bisexual</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputReligion">Religion</label>
+        <select name="Religion" class="form-control">
+          <option selected>Choose...</option>
+          <option>religious</option>
+          <option>agnostic</option>
+          <option>atheist</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputEducation">Education</label>
+        <select name="Education" class="form-control">
+          <option selected>Choose...</option>
+          <option>college/university</option>
+          <option>middle school</option>
+          <option>high school</option>
+          <option>med school</option>
+          <option>law school</option>
+          <option>masters program</option>
+          <option>ph.d program</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputJob">Job</label>
+        <select name="Job" class="form-control">
+          <option selected>Choose...</option>
+          <option>artistic / musical / writer</option>
+          <option>banking / financial / real estate</option>
+          <option>clerical / administrative</option>
+          <option>computer / hardware / software</option>
+          <option>construction / craftsmanship</option>
+          <option>education / academia</option>
+          <option>entertainment / media</option>
+          <option>executive / management</option>
+          <option>hospitality / travel</option>
+          <option>law / legal services</option>
+          <option>medicine / health</option>
+          <option>military</option> 
+          <option>political / government</option>
+          <option>retired</option>
+          <option>sales / marketing / biz dev</option>
+          <option>science / tech / engineering</option>
+          <option>student</option>
+          <option>transportation</option>
+          <option>unemployed</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputIncome">Income</label>
+        <input type="income" class="form-control" name="Income" placeholder="Income">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputEthnicity">Ethnicity</label>
+        <select name="Ethnicity" class="form-control">
+          <option selected>Choose...</option>
+          <option>asian</option>
+          <option>white</option>
+          <option>black</option>
+          <option>hispanic-latin</option>
+          <option>middle-eastern</option>
+          <option>native_american</option>
+          <option>indian</option>
+          <option>pacific_islander</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputBodytype">Bodytype</label>
+        <select name="Bodytype" class="form-control">
+          <option selected>Choose...</option>
+          <option>average</option>
+          <option>athletic</option>
+          <option>fit</option>
+          <option>skinny</option>
+          <option>curvy</option>
+          <option>overweight</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputDiet">Diet</label>
+        <select name="Diet" class="form-control">
+          <option selected>Choose...</option>
+          <option>anything</option>
+          <option>vegan</option>
+          <option>vegetarian</option>
+          <option>kosher</option>
+          <option>halal</option>
+          <option>other</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputSmokes">Smokes</label>
+        <select name="Smokes" class="form-control">
+          <option selected>Choose...</option>
+          <option>yes</option>
+          <option>rarely</option>
+          <option>no</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputDrinks">Drinks</label>
+        <select name="Drinks" class="form-control">
+          <option selected>Choose...</option>
+          <option>drinks socially</option>
+          <option>rarely</option>
+          <option>drinks_no</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label for="inputDrugs">Drugs</label>
+        <select name="Drugs" class="form-control">
+          <option selected>Choose...</option>
+          <option>drugs_yes</option>
+          <option>rarely</option>
+          <option>drugs_no</option>
+        </select>
+      </div>
+      
+    <div class="col-auto">
+      <br>
+
+      <button type="submit" class="btn btn-primary"> Match Profile</button>
+    </div>
+     </div>
+     </form>
+    </div>
+
+  </div>
+ 
+  
+  
+
+
+ <!-- End of container -->
+</article>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- <script src="../static/js/anime.js"></script> -->
+      
+</body>
+
+</html>
