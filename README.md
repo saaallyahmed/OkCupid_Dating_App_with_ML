@@ -5,12 +5,12 @@ presentation using:
 Flask, Java script, Html, ccs
 tableau, plotly, Machine learning
 
-Sally Ahmed
+
 cleanned 4 columns from the data and Graph it
 using sunburst graph using plotly 
 creating Tableau presentation.
 
-Manochitra Kumar: **Clustering and creating a recommendation algorithm:**
+**Clustering and creating a recommendation algorithm:**
 
 The scope for this part of the project was to cluster the user’s profiles into groups and to try to find a match more easily with the help of machine learning algorithms. We tried using different modelling/training methods for the data we had.
 The first step was to clean and preprocess the available data in a way it can be understood by the algorithms. 
